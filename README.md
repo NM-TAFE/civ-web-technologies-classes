@@ -1,1 +1,1 @@
-At the beginnning of ecah class pull down the latest version of the class session
+At the beginnning of each class pull down the latest version of the class session
