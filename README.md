@@ -1,4 +1,4 @@
-To pull updates from the original repository (upstream) into your forked repository on GitHub, you need to follow these steps:
+Start by forking this repository to your personnal account. To pull updates from the original repository (upstream) into your forked repository on GitHub, you need to follow these steps:
 
 ## Clone Your Fork: 
 Clone your forked repository to your local machine if you haven't already done so. You can do this with the git clone command followed by your fork's URL.
