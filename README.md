@@ -9,6 +9,7 @@ git clone <your-fork-url>
 Navigate to the directory of your local repository and add the original repository as a remote named "upstream". 
 
 cd <your-local-repo>
+
 git remote add upstream https://github.com/NM-TAFE/civ-web-technologies-classes.git
 
 ## Fetch Upstream Changes: Fetch the changes from the original repository.
