@@ -10,8 +10,8 @@ Navigate to the directory of your local repository and add the original reposito
 
 cd <your-local-repo>
 git remote add upstream https://github.com/NM-TAFE/civ-web-technologies-classes.git
-Fetch Upstream Changes: Fetch the changes from the original repository.
 
+## Fetch Upstream Changes: Fetch the changes from the original repository.
 git fetch upstream
 Merge or Rebase: After fetching the changes, you can either merge them into your local branch or rebase your changes on top of the upstream changes.
 
