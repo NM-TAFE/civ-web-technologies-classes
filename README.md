@@ -13,12 +13,15 @@ git remote add upstream https://github.com/NM-TAFE/civ-web-technologies-classes.
 
 ## Fetch Upstream Changes: Fetch the changes from the original repository.
 git fetch upstream
-Merge or Rebase: After fetching the changes, you can either merge them into your local branch or rebase your changes on top of the upstream changes.
 
+
+## Merge or Rebase: 
+After fetching the changes, you can either merge them into your local branch or rebase your changes on top of the upstream changes.
 ## Merge:
 git merge upstream/main
+
 Replace main with the name of the branch you want to merge into.
-Rebase:
+## Rebase:
 git rebase upstream/main
 
 Again, replace main with the name of the branch you want to rebase onto.
@@ -26,7 +29,9 @@ Resolve Conflicts (if any): If there are any merge conflicts, resolve them manua
 
 ## Push Changes to Your Fork: 
 Once you've resolved any conflicts and merged or rebased the changes, push them to your fork on GitHub.
+
 git push origin <branch-name>
+
 Replace <branch-name> with the name of the branch you've updated.
 
 Now your forked repository on GitHub should be up to date with the changes from the original repository.
