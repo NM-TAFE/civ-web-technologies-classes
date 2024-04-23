@@ -5,7 +5,7 @@ const z = 3;
 
 console.log(`global: ${x}`);
 console.log(`global: ${y}`);
-console.log(`global: ${x}`);
+console.log(`global: ${z}`);
 
 function localFunction() {
   // Step 2 Local
