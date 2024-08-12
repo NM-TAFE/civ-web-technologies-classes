@@ -19,17 +19,18 @@ MyListComponent.prototype.render = function () {
 
 // The list of books
 let app = new MyListComponent('#app', {
-    data: {
-        books: ['Harry Potter I', 'Harry Potter II', 'Harry Potter III']
-    },
+	data: {
+		// This could be API response data
+		books: ['Harry Potter I', 'Harry Potter II', 'Harry Potter III']
+	},
 	template: function (props) {
-        let html =
+		let html =
 			'<ul>' +
-                // Loop through the props array wrapping each item in a <li>
-				props.books.map(function (book) {
-					return '<li>' + book + '</li>';
-					}).join('') +
-				'</ul>';
+			// Loop through the props array wrapping each item in a <li>
+			props.books.map(function (book) {
+				return '<li>' + book + '</li>';
+			}).join('') +
+			'</ul>';
 		return html;
 	}
 });
