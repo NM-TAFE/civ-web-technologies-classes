@@ -6,11 +6,27 @@
     <title>Image Gallery Grid using CSS Grid</title>
     <style>
       /* Grid Container */
+      .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Three equal columns on desktop screens */
+        grid-gap: 20px;
+        padding: 20px;
+      }
 
-      /* Gallery Item (Image) */
+      /* Card Item */
+      .card {
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: center;
+      }
 
       /* Media Query for Responsive Layout */
       @media (max-width: 768px) {
+        /* Grid Container */
+        .card-container {
+          grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        }
       }
     </style>
   </head>

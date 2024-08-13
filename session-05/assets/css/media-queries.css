@@ -1,0 +1,27 @@
+/* Media Query for Responsive Layout */
+/* Reference https://css-tricks.com/a-complete-guide-to-css-media-queries/ */
+/* @media (min-width: 768px) {
+
+}
+
+@media [media-type] ([media-feature]) {
+
+}
+
+@media print and (orientation: portrait) {
+
+}
+
+@media screen and (min-width: 30em) and (orientation: landscape) {
+
+}
+
+@media (min-width: 320px) and (max-width: 768px) { 
+
+}
+
+@media print and ( not(color) ) {
+    body {
+        background-color: none;
+    }
+} */
