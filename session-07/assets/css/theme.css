@@ -1,0 +1,20 @@
+:root {
+  --background-colour: #fff;
+  --text-colour: #000000;
+  --link-colour: #1a73e8;
+}
+
+.dark-theme {
+  --background-colour: #000;
+  --text-colour: #fff;
+  --link-colour: #bb86fc;
+}
+
+body {
+  background-color: var(--background-colour);
+  color: var(--text-colour);
+}
+
+a {
+  color: var(--link-colour);
+}
