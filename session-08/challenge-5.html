@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Web Component Example</title>
+    <script>
+      // Define the custom element class
+      class MyCustomComponent extends HTMLElement {
+        constructor() {
+          super();
+        }
+
+        connectedCallback() {
+          console.log("Hello");
+        }
+      }
+
+      // Register the custom element with the browser
+      customElements.define("my-custom-component", MyCustomComponent);
+    </script>
+  </head>
+  <body>
+    <!-- Use the custom web component -->
+    <my-custom-component>Here is my component</my-custom-component>
+  </body>
+</html>
