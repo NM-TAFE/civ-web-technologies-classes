@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Web Component Example</title>
     <script>
-      // Define the custom element class
+      // Step 1:  Define the custom element class
       class MyCustomComponent extends HTMLElement {
         constructor() {
           super();
@@ -16,12 +16,12 @@
         }
       }
 
-      // Register the custom element with the browser
+      // Step 2: Register the custom element with the browser
       customElements.define("my-custom-component", MyCustomComponent);
     </script>
   </head>
   <body>
-    <!-- Use the custom web component -->
+    <!-- Step 3: Use the custom web component -->
     <my-custom-component>Here is my component</my-custom-component>
   </body>
 </html>
