@@ -1,1 +1,4 @@
 /* Add any custom hidden class here */
+.hidden {
+  visibility: hidden;
+}
