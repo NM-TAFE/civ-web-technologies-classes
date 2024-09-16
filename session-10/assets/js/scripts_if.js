@@ -1,8 +1,6 @@
 function isValidEmail(email) {
-  // Initialize a variable to store feedback
+  // Initialise a variable to store feedback
   let feedback = "";
-
-  // Check for basic email format
 
   // Check for basic email format
   // hint: email.match()
@@ -23,9 +21,12 @@ function isValidEmail(email) {
   // Check for "@" at the start or end
   // hint: use startsWith(), endsWith() & the or comparison opertor ||
 
-  // }
-
-  // Determine the final validation result
+  // Determine the final validation result & return the feedback messgae
+  if (feedback === "") {
+    // return a valid message
+  } else {
+    // return aan invalid message use=ing template literals
+  }
 }
 
 // Test cases
