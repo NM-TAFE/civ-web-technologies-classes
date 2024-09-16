@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100">
+    <header>
+      <h1 class="text-4xl text-center font-semibold mb-2 text-blue-500">
+        News
+      </h1>
+      <!-- <nav></nav> -->
+    </header>
+    <div class="container mx-auto py-6">
+      <section class="main-content">
+        <h2 class="text-2xl font-semibold mb-4">Latest News</h2>
+        <div class="news-article">
+          <h3 class="text-lg font-semibold mb-2 text-blue-500">
+            New Product Launch
+          </h3>
+          <p class="text-gray-700 mb-4">
+            Our latest product is now available. Check it out!
+          </p>
+          <a
+            href="#"
+            class="bg-blue-500 text-white px-4 py-2 rounded-lg inline-block hover:bg-blue-600 transition duration-300"
+            >Read More</a
+          >
+        </div>
+        <div class="news-article mt-6">
+          <h3 class="text-lg font-semibold mb-2 text-blue-500">
+            Client Success Story
+          </h3>
+          <p class="text-gray-700 mb-4">
+            Read about how our services helped a client achieve success.
+          </p>
+          <a
+            href="#"
+            class="bg-blue-500 text-white px-4 py-2 rounded-lg inline-block hover:bg-blue-600 transition duration-300"
+            >Read More</a
+          >
+        </div>
+      </section>
+      <aside class="sidebar mt-6 md:mt-0 md:ml-6">
+        <h3 class="text-lg font-semibold mb-4">Upcoming Events</h3>
+        <ul>
+          <li>
+            <a href="#" class="text-blue-500 hover:underline"
+              >Tech Conference</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-blue-500 hover:underline"
+              >Product Workshop</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-blue-500 hover:underline"
+              >Networking Mixer</a
+            >
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Contact Form - add novalidate -->
+    <div class="container mx-auto py-6 bg-white shadow-md rounded-lg">
+      <h3 class="text-2xl font-semibold mb-4 text-center">Contact Us</h3>
+      <form
+        id="contactForm"
+        class="px-4 py-2"
+        action="#"
+        method="post"
+        data-post-url="https://dev.screencraft.net.au/~staff-ag/show-me/index.php?demo"
+        novalidate
+      >
+        <section class="mb-4">
+          <label for="name" class="block text-gray-600 font-semibold mb-2"
+            >Name:</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your name"
+            class="w-full px-3 py-2 border rounded-lg"
+          />
+          <span id="nameError" class="text-red-500 hidden">
+            Please enter your name
+          </span>
+        </section>
+
+        <section class="mb-4">
+          <label for="email" class="block text-gray-600 font-semibold mb-2"
+            >Email:</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your email"
+            class="w-full px-3 py-2 border rounded-lg"
+          />
+          <span id="emailError" class="text-red-500 hidden">
+            Please enter a valid email address
+          </span>
+        </section>
+
+        <section class="mb-4">
+          <label for="subject" class="block text-gray-600 font-semibold mb-2"
+            >Subject:</label
+          >
+          <select
+            id="subject"
+            name="subject"
+            class="w-full px-3 py-2 border rounded-lg"
+          >
+            <optgroup label="Technical Support">
+              <option value="bug_report">Bug Report</option>
+              <option value="feature_request">Feature Request</option>
+            </optgroup>
+            <optgroup label="Sales">
+              <option value="pricing">Pricing Inquiry</option>
+              <option value="product_info">Product Information</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option value="general_inquiry">General Inquiry</option>
+              <option value="feedback">Feedback</option>
+            </optgroup>
+          </select>
+          <span id="subjectError" class="text-red-500 hidden">
+            Please add a subject
+          </span>
+        </section>
+
+        <section class="mb-4">
+          <input
+            type="checkbox"
+            id="subscribe"
+            name="subscribe_checked"
+            value="yes"
+            class="mr-2"
+          />
+          <label for="subscribe" class="text-gray-600"
+            >Subscribe to newsletter</label
+          >
+          <span id="subscribeError" class="text-red-500 hidden">
+            Please subscribe
+          </span>
+        </section>
+
+        <section class="mb-4">
+          <button
+            type="submit"
+            class="bg-blue-500 text-white px-4 py-2 rounded-lg"
+          >
+            Submit
+          </button>
+        </section>
+      </form>
+      <span
+        class="confirmation-message hidden bg-green-500 text-white px-4 py-2 rounded-lg text-center"
+        id="confirmationMessage"
+      >
+        Thank you for your message!
+      </span>
+    </div>
+    <footer class="bg-gray-300 py-4 text-center">
+      <p class="text-gray-600">
+        &copy; 2023 Your Company. All rights reserved.
+      </p>
+    </footer>
+    <script src="./tailwind_form_validation.js"></script>
+  </body>
+</html>
