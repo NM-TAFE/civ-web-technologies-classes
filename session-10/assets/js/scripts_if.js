@@ -1,6 +1,7 @@
 function isValidEmail(email) {
   // Initialise a variable to store feedback
   let feedback = "";
+  console.log();
 
   // Check for basic email format
   // hint: email.match()
