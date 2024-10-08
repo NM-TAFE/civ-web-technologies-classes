@@ -23,7 +23,7 @@ const anObject = {
     console.log(`arrow function: ${this.name}`); // Output: Object Context
 
     const nestedArrowFunction = () => {
-      name: 'Nested Arrow function'
+      name: 'Nested Arrow function',
       // Step 5: Nested arrow function context
       console.log(`nested arrow function: ${this.name}`); // Output: Object Context
     };
