@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Components with JS Methods</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <section class="section">
+        <div class="box">
+          <h1 class="title">JavaScript Methods in Web Components</h1>
+          <p>Select a method:</p>
+          <div class="select">
+            <select id="methodSelector">
+              <option value="filter">Filter</option>
+              <option value="map">Map</option>
+              <option value="sort">Sort</option>
+              <option value="includes">Includes</option>
+              <option value="find">Find</option>
+            </select>
+          </div>
+          <div id="result"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Main logic for selecting and rendering components -->
+    <script src="js/data-processor.js"></script>
+    <script>
+      document
+        .getElementById("methodSelector")
+        .addEventListener("change", function () {
+          const resultContainer = document.getElementById("result");
+          resultContainer.innerHTML = "";
+          const selectedMethod = this.value;
+
+          const element = document.createElement(`js-${selectedMethod}`);
+          resultContainer.appendChild(element);
+        });
+    </script>
+
+    <!-- Individual component scripts -->
+    <script src="js/js-filter.js"></script>
+    <script src="js/js-map.js"></script>
+    <script src="js/js-sort.js"></script>
+    <script src="js/js-includes.js"></script>
+    <script src="js/js-find.js"></script>
+  </body>
+</html>
