@@ -12,4 +12,4 @@ let uniqueArray = [...new Set(mergedArray)];
 let [first, second, third, ...others] = uniqueArray;
 // Set the value of the output filed to be the second element of the unique array
 let outField = document.getElementById("OutputField");
-outField.innerHTML = newArray;
+outField.innerHTML = uniqueArray;
