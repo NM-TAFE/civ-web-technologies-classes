@@ -4,13 +4,22 @@
  * @param id
  */
 async function getArticleByID(id) {
-  let response = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${id}`
-  );
+  try {
+    let response = await fetch(
+      `https://jsonplaceholder.typicode.com/posts/${id}`
+    );
 
-  let data = await response.json();
+    if (!response.ok) {
+      // throw new Error();
+      throw "Something went wrong";
+    }
 
-  console.log(data);
+    let data = await response.json();
+
+    console.log(data);
+  } catch (error) {
+    console.warn(error);
+  }
 }
 
 getArticleByID(1);
