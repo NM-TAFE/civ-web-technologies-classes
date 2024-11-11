@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="assets/css/output.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-gray-100 font-sans text-gray-800 dark:bg-gray-900 dark:text-white"
+  >
+    <!-- Dark Mode Toggle -->
+
+    <!-- Navbar with Responsive Design -->
+    <header>
+      <nav class="flex justify-between bg-blue-600 p-4 text-white">
+        <h1 class="text-xl">My Website</h1>
+        <div>
+          <a href="index.html" class="mr-4">Home</a>
+          <a href="about.html" class="mr-4">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="p-8">
+      <section>
+        <h2 class="mb-4 text-2xl font-bold">Welcome to My Website</h2>
+
+        <!-- Responsive Utilities for Background Colors -->
+        <div
+          class="bg-blue-500 p-4 text-white sm:bg-green-500 md:bg-red-500 lg:bg-yellow-500"
+        >
+          Responsive Background Color
+        </div>
+
+        <!-- Hover and Focus Effects -->
+        <button
+          class="mt-4 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:bg-blue-900"
+        >
+          Hover and Focus Button
+        </button>
+
+        <!-- Custom Theme Colors -->
+        <div class="mt-4 bg-primary p-4 text-white">
+          Custom Primary Theme Color
+        </div>
+
+        <!-- Flexbox Layout -->
+        <div class="mt-6 flex h-40 items-center justify-center bg-gray-300">
+          <p class="text-center">Centered Flexbox Content</p>
+        </div>
+
+        <!-- @apply -->
+        <button class="btn mt-4">@Apply</button>
+      </section>
+    </main>
+  </body>
+</html>
