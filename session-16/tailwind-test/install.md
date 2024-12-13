@@ -2,7 +2,7 @@ Here's a simple three-page website setup with Tailwind CSS classes. Each page co
 
 ### Steps to Install Tailwind with NPM
 
-1. **Initialize NPM**:
+1. **Initialise NPM**:
 
    ```bash
    npm init -y
