@@ -23,23 +23,6 @@ class UserObject {
 }
 
 // Create an instance of the ComplexObject class (hint: add the properties)
-const userObjectInstance = new UserObject(
-  "John",
-  "Doe",
-  30,
-  false,
-  {
-    street: "123 Main St",
-    city: "Anytown",
-    zipCode: "12345",
-  },
-  ["JavaScript", "HTML", "CSS"],
-  {
-    twitter: "@johndoe",
-    linkedIn: "linkedin.com/in/johndoe",
-  },
-  true
-);
+const userObjectInstance = new UserObject();
 
 // Log the new instance of the object
-console.log(userObjectInstance);

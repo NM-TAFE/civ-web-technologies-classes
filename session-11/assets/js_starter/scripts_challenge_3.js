@@ -8,6 +8,3 @@ const product = {
 };
 
 // Your code goes here
-for (let property in product) {
-  console.log(`${property}: ${product[property]}`)
-}

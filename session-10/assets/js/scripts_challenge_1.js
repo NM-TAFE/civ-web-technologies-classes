@@ -1,7 +1,5 @@
 function isValidEmail(email) {
   // Use expression operators, the match method, a regex and strings to validate the email
-  const valid = email.match(/^\S+@\S+\.\S+$/) !== null;
-  return valid;
 }
 
 // Test cases

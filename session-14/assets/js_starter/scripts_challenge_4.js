@@ -11,12 +11,7 @@ let prefix = "autosave_";
  */
 function inputHandler(event) {
   // save the field to a variable
-  let field = event.target;
-
-  if (!field.id) return;
-
   // save the field to the localstorage
-  localStorage.setItem(prefix + field.id, field.value);
 }
 
 /**
@@ -24,11 +19,6 @@ function inputHandler(event) {
  */
 function clearStorage() {
   // get all the fields in the form
-  let fields = form.elements;
-
-  for (let field of fields) {
-    localStorage.removeItem(prefix + field.id);
-  }
 }
 
 /**
@@ -36,21 +26,11 @@ function clearStorage() {
  */
 function loadSaved() {
   // get all the fields in the form
-  let fields = form.elements;
-
-  for (let field of fields) {
-    let saved = localStorage.getItem(prefix + field.id);
-    if (!saved) continue;
-    field.value = saved;
-  }
 }
 
 // Load saved data from localStorage
-loadSaved();
 
 // Listen for DOM events
 // input - typing
-form.addEventListener("input", inputHandler);
 
-// // submitting - submitting clear
-// form.addEventListener("submit", clearStorage);
+// submitting - submitting clear

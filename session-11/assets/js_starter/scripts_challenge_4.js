@@ -1,17 +1,8 @@
 // Challenge 4 Starter
-const eventLinks = document.querySelectorAll("[data-event]");
+const eventLinks = document.querySelectorAll();
 
-// function logEvent(eventDetails) {
-//     // Your code goes here
-//     console.log(`${eventLinks[eventDetails].innerHTML.toUpperCase()}`)
-// }
-
-const logEvent = (eventDetails) => {
-    console.log(`${eventLinks[eventDetails].innerHTML.toUpperCase()}`)
+function logEvent(eventDetails) {
+  // Your code goes here
 }
 
 // Your code goes here
-for(const[eventDetails] of eventLinks.entries()) {
-    console.log(eventDetails);
-    logEvent(eventDetails);
-}
