@@ -6,30 +6,10 @@
     <title>Image Gallery Grid using CSS Grid</title>
     <style>
       /* Grid Container */
-      .gallery-container {
-        display: grid;
-        /* grid-template-columns: 1fr; */
-        grid-gap: 20px;
-        padding: 20px;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        transition: grid-template-columns 0.5s ease-in-out; /* Smooth transition */
-      }
 
       /* Card Item */
-      .gallery-item {
-        width: 100%;
-        /* max-width: 100%; */
-        /* height: auto; */
-        height: 200px;
-        object-fit: cover; /*fill, contain, scale-down*/
-      }
 
       /* Media Query for Responsive Layout */
-      @media (min-width: 768px) {
-        .gallery-container {
-          grid-template-columns: 1fr 1fr 1fr;
-        }
-      }
     </style>
   </head>
   <body>

@@ -6,28 +6,12 @@
     <title>Flexible Card Layout using CSS Grid (Alternative)</title>
     <style>
       /* Grid Container */
-      .card-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-        padding: 20px;
-        transition: grid-template-columns 0.5s ease-in-out;
-      }
 
       /* Card Item */
-      .card {
-        background-color: #f2f2f2;
-        border: 1px solid #ccc;
-        padding: 20px;
-        text-align: center;
-      }
+
       /* Media Query for Responsive Layout */
       @media (min-width: 768px) {
         /* Grid Container */
-        .card-container {
-          /* grid-template-columns: 1fr 1fr 1fr; */
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
       }
     </style>
   </head>
