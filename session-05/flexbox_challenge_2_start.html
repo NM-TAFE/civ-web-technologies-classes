@@ -6,9 +6,34 @@
     <title>Flexbox Challenge 2</title>
     <style>
       /* Flexbox for Cards*/
+      .card-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .card {
+        width: auto;
+        box-sizing: border-box;
+        background-color: aliceblue;
+        bottom: 1px solid #ccc;
+        padding: 20px;
+      }
 
       /* Media Query for Responsive Layout */
       @media (min-width: 768px) {
+        .card {
+          width: calc(33.3% -20px);
+        }
+
+        .card-container {
+          flex-direction: unset;
+          flex-wrap: wrap;
+          /* flex-flow: wrap; */
+          justify-content: space-evenly;
+        }
       }
     </style>
   </head>
