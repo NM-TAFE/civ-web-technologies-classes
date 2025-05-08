@@ -20,15 +20,16 @@ const anObject = {
 
   arrowFunction: () => {
     // Step 4: Arrow function context
-    console.log(`arrow function: ${this.name}`); // Output: Object Context
+    console.log(`arrow function: ${this}`); // Output: Undefined: (Window)
 
     const nestedArrowFunction = () => {
-      name: 'Nested Arrow function',
-      // Step 5: Nested arrow function context
-      console.log(`nested arrow function: ${this.name}`); // Output: Object Context
+      name: "Nested Arrow function",
+        // Step 5: Nested arrow function context
+        console.log(`nested arrow function: ${this.name}`); // Output: undefined (Window)
     };
 
     nestedArrowFunction();
+    console.log(`nested arrow function: ${nestedArrowFunction.name}`); // Output: "Nested Arrow function"
   },
 };
 

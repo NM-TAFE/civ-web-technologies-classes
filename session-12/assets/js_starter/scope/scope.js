@@ -9,8 +9,8 @@ console.log(`global: ${z}`);
 
 function localFunction() {
   // Step 2 Local
-  // var x = 10;
-  // const z = 5;
+  var x = 10;
+  const z = 5;
 
   console.log(`local: ${x}`);
   console.log(`local: ${y}`);
@@ -18,8 +18,8 @@ function localFunction() {
 
   {
     // Step 3 Block
-    // var x = 11;
-    // const z = 6;
+    var x = 11;
+    const z = 6;
 
     console.log(`block: ${x}`);
     console.log(`block: ${y}`);
@@ -27,11 +27,9 @@ function localFunction() {
   }
 
   //   Step 4 Function scoping
-  //   console.log(`local: ${x}`);
-  //   console.log(`local: ${y}`);
-  //   console.log(`local: ${z}`);
+  console.log(`local: ${x}`);
+  console.log(`local: ${y}`);
+  console.log(`local: ${z}`);
 }
 
 localFunction();
-
-
