@@ -152,6 +152,9 @@
 
         function handleClick() {
           setIndex((index + 1) % sculptureList.length);
+          console.log("Calc", index);
+          console.log("Calc", sculptureList.length);
+          console.log("Calc", (index + 1) % sculptureList.length);
         }
 
         let sculpture = sculptureList[index];

@@ -1,29 +1,17 @@
-// Challenge 2 Starter
-const userObject = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 30,
-  isStudent: false,
-  address: {
-    street: "123 Main St",
-    city: "Anytown",
-    zipCode: "12345",
-  },
-  skills: ["JavaScript", "HTML", "CSS"],
-  socialProfiles: {
-    twitter: "@johndoe",
-    linkedIn: "linkedin.com/in/johndoe",
-  },
-  isEmployed: true,
-  changeAge(newAge) {
-    this.age = newAge;
-  },
-};
+// Challenge 2
+// Import the array of books
+import books from "/books.js";
 
-// Deep clone the complexObject three times using the spread operator for shallow cloning
+// Calculate the total price of all books using a callback
+// Pass both the books array and the callback function
+function calculateTotalPrice(books, callback) {
+  //
+}
 
-// Store the cloned objects in an array
+// Callback function to display the total price
+function displayTotalPrice() {
+  //
+}
 
-// Sort the array of cloned objects based on the 'age' property in ascending order
-
-// Log the sorted array to the console
+// Call the main function passing in the books and the callback
+calculateTotalPrice(books, displayTotalPrice);
