@@ -1,6 +1,6 @@
 Here's a simple three-page website setup with Tailwind CSS classes. Each page contains a basic structure to help you see Tailwind in action after installation. Follow the setup steps, then use these files to test Tailwind.
 
-### Steps to Install Tailwind with NPM
+### Steps to Install Tailwind v3 with NPM
 
 1. **Initialise NPM**:
 
@@ -11,7 +11,7 @@ Here's a simple three-page website setup with Tailwind CSS classes. Each page co
 2. **Install Tailwind**:
 
    ```bash
-   npm install -D tailwindcss
+   npm install -D tailwindcss@^3.0
    ```
 
 3. **Create a Tailwind Configuration File**:
@@ -49,7 +49,7 @@ Here's a simple three-page website setup with Tailwind CSS classes. Each page co
    };
    ```
 
-5. **Create a CSS File for Tailwind** (e.g., `style.css`):
+5. **Create a CSS File for Tailwind** (e.g., `input.css`):
 
    ```css
    @tailwind base;
@@ -57,46 +57,47 @@ Here's a simple three-page website setup with Tailwind CSS classes. Each page co
    @tailwind utilities;
    ```
 
-6. **Build Tailwind CSS**:
+6. After setting up these files, run your Tailwind build command (`npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch`), and you should see Tailwind styles applied to your pages!
 
    ```bash
-   npx tailwindcss -i ./style.css -o ./output.css --watch
-
-   npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch
+   npm install @tailwindcss/forms @tailwindcss/typography
+   npm install postcss autoprefixer
+   ```
+   
+   ```js
+   // tailwind.config.js
+   /** @type {import('tailwindcss').Config} */
+   module.exports = {
+     content: ["./index.html", "./phase-*/*.html", "./pages/**/*.html"],
+     theme: {
+       extend: {},
+     },
+     animation: {
+       "spin-slow": "spin 3s linear infinite", // slow spin animation
+     },
+     plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+   };
+   ```
+   ```js
+   // postcss.config.js
+   module.exports = {
+     plugins: {
+       tailwindcss: {},
+       autoprefixer: {}, // Adds vendor prefixes for better cross-browser compatibility
+     },
+   };
+   ```
+7. **Build Tailwind CSS**:
+   Running from npm not npx, add a script to your package.json
+   ```json
+   "scripts": {
+    "build:css": "tailwindcss -i ./style.css -o ./output.css --watch"
+   },
    ```
 
-After setting up these files, run your Tailwind build command (`npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch`), and you should see Tailwind styles applied to your pages!
-
-```bash
-npm install @tailwindcss/forms @tailwindcss/typography
-npm install postcss autoprefixer
-rm -rf node_modules
-npm install
-
-```
-
-```js
-// tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./index.html", "./phase-*/*.html", "./pages/**/*.html"],
-  theme: {
-    extend: {},
-  },
-  animation: {
-    "spin-slow": "spin 3s linear infinite", // slow spin animation
-  },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
-};
-
-// postcss.config.js
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {}, // Adds vendor prefixes for better cross-browser compatibility
-  },
-};
-```
+   ```bash
+   npx tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch
+   ```
 
 ### Summary of Features Used
 
@@ -128,7 +129,6 @@ Each page includes distinct Tailwind CSS features:
 **vscode:tailwind css intellisense**
 autocompletion, class name previews, and even shows colors and spacing, speeding up the class selection process.
 
-- Enable JIT Mode for Faster
 - prettier code sorting
   link: https://tailwindcss.com/blog/automatic-class-sorting-with-prettier
 
@@ -140,4 +140,11 @@ npm install -D prettier prettier-plugin-tailwindcss
 {
   "plugins": ["prettier-plugin-tailwindcss"]
 }
+```
+
+**If you get into trouble you can reste your packages, node modules npm cache**
+```bash
+npm cache clean --force
+rm -rf node_modules package-lock.json
+npm install
 ```
